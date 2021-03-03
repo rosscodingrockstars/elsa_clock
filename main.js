@@ -1,0 +1,1 @@
+console.log($( "#singing-rehearsal" ).val())

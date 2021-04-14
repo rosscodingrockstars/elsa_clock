@@ -37,7 +37,12 @@ $("#singing-rehearsal").change(function() {
         }
      
        });
+       $( "#partywoo" ).click(function() {
+        
+        $("#default-img").attr("src", "https://media.gettyimages.com/photos/group-of-friends-at-a-party-picture-id949040980?s=612x612");
+
+      });
   // https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/doja-cat-1582767283.jpg
   //https://static.billboard.com/files/2020/08/doja-cat-james-charles-makeup-tutorial-2020-video-still-billboard-1548-1597261378-compressed.jpg
   //https://townsquare.media/site/495/files/2020/02/Doja-Cat-2.jpg?w=980&q=75
-  
+  //party https://media.gettyimages.com/photos/group-of-friends-at-a-party-picture-id949040980?s=612x612

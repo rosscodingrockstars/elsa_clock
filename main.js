@@ -38,23 +38,29 @@ $("#singing-rehearsal").change(function() {
         }
      
        });
-       $( "#partywoo" ).click(function() {
-        let changeBack = true
-
-        
+       let changeBack = true;
+       $( "#partywoo" ).click(function() { 5
         if (changeBack === true) {
           $(this).css('background-color','#695d92');
         $(this).text('uh oh i see moms car'); 
         $("#default-img").attr("src", "https://media.gettyimages.com/photos/group-of-friends-at-a-party-picture-id949040980?s=612x612");
         }
+        
        else if (changeBack === false) {
-          $(this).css('background-color','#828dca');
+          $(this).css('background-`color','#828dca');
         $(this).text('party woo'); 
         $("#default-img").attr("src", "https://theshaderoom.com/wp-content/uploads/2020/10/IMG_1081.jpg");
+
        }
+       changeBack = !changeBack;
       });
-    
-  // https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/doja-cat-1582767283.jpg
-  //https://static.billboard.com/files/2020/08/doja-cat-james-charles-makeup-tutorial-2020-video-still-billboard-1548-1597261378-compressed.jpg
-  //https://townsquare.media/site/495/files/2020/02/Doja-Cat-2.jpg?w=980&q=75
-  //party https://media.gettyimages.com/photos/group-of-friends-at-a-party-picture-id949040980?s=612x612
+  const time = new Date(); 
+  console.log(time)
+  const hours = time.getHours();
+  console.log(hours)
+  const minutes = time.getMinutes();
+  console.log(minutes)
+  const seconds = time.getSeconds();
+  console.log(seconds)
+  const timeControl = `${hours}:${minutes}:${seconds}`
+  console.log(timeControl)

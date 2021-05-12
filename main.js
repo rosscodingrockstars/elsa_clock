@@ -54,13 +54,20 @@ $("#singing-rehearsal").change(function() {
        }
        changeBack = !changeBack;
       });
-  const time = new Date(); 
-  console.log(time)
-  const hours = time.getHours();
-  console.log(hours)
-  const minutes = time.getMinutes();
-  console.log(minutes)
-  const seconds = time.getSeconds();
-  console.log(seconds)
-  const timeControl = `${hours}:${minutes}:${seconds}`
-  console.log(timeControl)
+      function showTime() {
+      let time = new Date(); 
+      
+     let hours = time.getHours();
+     let  minutes = time.getMinutes();
+    let seconds = time.getSeconds();
+      var ampm = hours >= 12 ? 'pm' : 'am';
+      hours = hours % 12;
+      hours = hours ? hours : 12; // the hour '0' should be '12'
+      minutes = minutes < 10 ? '0'+minutes : minutes;
+   seconds = seconds < 10 ? '0'+seconds : seconds;
+      const timeControl = `${hours}:${minutes}:${seconds}${ampm}`
+      
+      $("#clock").text(timeControl)
+    }
+  
+  setInterval(showTime,1000)
